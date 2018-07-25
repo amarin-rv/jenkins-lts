@@ -24,3 +24,6 @@ docker logs -f jenkins
 ```
 docker exec -u root jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ```
+
+## ref
+<https://github.com/jenkinsci/docker>
