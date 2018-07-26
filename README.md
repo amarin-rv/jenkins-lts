@@ -1,12 +1,12 @@
 # jenkins-lts
 ## docker build
 ```
-docker build -t jenkins .
+docker build -t jenkinsdocker .
 ```
 ## docker run
 ```
 docker run \
-  --name jenkins \
+  --name jenkinsdocker \
   -u root \
   -d \
   --restart=always \
@@ -14,15 +14,15 @@ docker run \
   -p 50000:50000 \
   -v /var/jenkins_home:/var/jenkins_home \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  jenkins
+  jenkinsdocker
 ```
 ## docker view run logs
 ```
-docker logs -f jenkins
+docker logs -f jenkinsdocker
 ```
 ## docker view admin pass
 ```
-docker exec -u root jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+docker exec -u root jenkinsdocker cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
 ## ref
